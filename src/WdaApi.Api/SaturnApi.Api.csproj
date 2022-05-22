@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>a60dcd6c-d1fb-4228-a679-7778a9e8db54</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <AssemblyName>WdaApi.Api</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\Banner\**" />
+    <Compile Remove="Controllers\Client\**" />
+    <Compile Remove="Controllers\Coupon\**" />
+    <Compile Remove="Controllers\Raffles\**" />
+    <Compile Remove="Controllers\Training\**" />
+    <Compile Remove="ViewModels\UserMobile\**" />
+    <Content Remove="Controllers\Banner\**" />
+    <Content Remove="Controllers\Client\**" />
+    <Content Remove="Controllers\Coupon\**" />
+    <Content Remove="Controllers\Raffles\**" />
+    <Content Remove="Controllers\Training\**" />
+    <Content Remove="ViewModels\UserMobile\**" />
+    <EmbeddedResource Remove="Controllers\Banner\**" />
+    <EmbeddedResource Remove="Controllers\Client\**" />
+    <EmbeddedResource Remove="Controllers\Coupon\**" />
+    <EmbeddedResource Remove="Controllers\Raffles\**" />
+    <EmbeddedResource Remove="Controllers\Training\**" />
+    <EmbeddedResource Remove="ViewModels\UserMobile\**" />
+    <None Remove="Controllers\Banner\**" />
+    <None Remove="Controllers\Client\**" />
+    <None Remove="Controllers\Coupon\**" />
+    <None Remove="Controllers\Raffles\**" />
+    <None Remove="Controllers\Training\**" />
+    <None Remove="ViewModels\UserMobile\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\CategoriesController" />
+  </ItemGroup>
+	<ItemGroup>
+		<RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.16" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Include="MOQ" Version="4.16.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+    <PackageReference Include="runtime.osx.10.10-x64.CoreCompat.System.Drawing" Version="6.0.5.128" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WdaApi.Business\SaturnApi.Business.csproj" />
+    <ProjectReference Include="..\WdaApi.Data\SaturnApi.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResource.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+</Project>

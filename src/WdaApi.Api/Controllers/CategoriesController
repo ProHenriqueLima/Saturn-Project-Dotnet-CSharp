@@ -1,0 +1,92 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
+using IbramedSearch.Api.ViewModels.Categories;
+using IbramedSearch.Business.Interfaces;
+using IbramedSearch.Business.Interfaces.Categories;
+using IbramedSearch.Business.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
+
+namespace IbramedSearch.Api.Controllers
+{
+    [Authorize(Roles = "Admin, Users")]
+    [Route("{culture:culture}/api/[controller]")]
+    public class CategoriesController : MainController<CategoriesController>
+    {
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly ICategoryService _categoryService;
+        private readonly IMapper _mapper;
+        private readonly IStringLocalizer<CategoriesController> _localizer;
+
+        public CategoriesController(ICategoryRepository categoryRepository,
+            ICategoryService categoryService,
+            IMapper mapper,
+            IErrorNotifier errorNotifier,
+            IUser user, IStringLocalizer<CategoriesController> localizer) : base(errorNotifier, user, localizer)
+        {
+            _categoryRepository = categoryRepository;
+            _categoryService = categoryService;
+            _mapper = mapper;
+            _localizer = localizer;
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable<CategoryViewModel>> GetAll()
+        {
+            var categories = _mapper.Map<IEnumerable<CategoryViewModel>>(await _categoryRepository.GetAll());
+            return categories;
+        }
+
+        [HttpGet("{id:Guid}")]
+        public async Task<ActionResult<CategoryViewModel>> GetById(Guid id)
+        {
+            var category = _mapper.Map<CategoryViewModel>(await _categoryRepository.GetById (id));
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            return category;
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public async Task<ActionResult<CategoryViewModel>> Add(CategoryViewModel categoryViewModel)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            await _categoryService.Add(_mapper.Map<Category>(categoryViewModel));
+
+            return CustomResponse(categoryViewModel);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPut]
+        public async Task<ActionResult<CategoryViewModel>> Update(CategoryViewModel categoryViewModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            await _categoryService.Update(_mapper.Map<Category>(categoryViewModel));
+
+            return CustomResponse(categoryViewModel);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{id:Guid}")]
+        public async Task<ActionResult<CategoryViewModel>> Remove(Guid id)
+        {
+            var category = await _categoryRepository.GetById(id);
+            if (category == null) return NotFound();
+
+            await _categoryService.Remove(id);
+
+            return CustomResponse();
+        }
+    }
+}
