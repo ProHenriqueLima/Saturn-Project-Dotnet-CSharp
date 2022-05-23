@@ -1,4 +1,4 @@
-﻿namespace WdaApi.Business.Interfaces
+﻿namespace SaturnApi.Business.Interfaces
 {
     public class FilterVM
     {

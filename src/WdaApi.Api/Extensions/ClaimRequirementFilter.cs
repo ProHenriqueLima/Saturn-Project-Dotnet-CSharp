@@ -1,5 +1,5 @@
-﻿using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
+﻿using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Extensions
+namespace SaturnApi.Api.Extensions
 {
     public class ClaimRequirementAttribute : TypeFilterAttribute
     {

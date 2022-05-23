@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace WdaApi.Api.Extensions
+namespace SaturnApi.Api.Extensions
 {
     public sealed class ModelStateCheckFilter : IActionFilter
     {

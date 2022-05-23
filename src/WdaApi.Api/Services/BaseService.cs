@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using WdaApi.Business.ErrorNotifications;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
+using SaturnApi.Business.ErrorNotifications;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Services
+namespace SaturnApi.Api.Services
 {
      public abstract class BaseService
     {

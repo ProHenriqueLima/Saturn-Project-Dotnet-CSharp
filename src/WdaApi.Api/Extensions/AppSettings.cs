@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Extensions
+namespace SaturnApi.Api.Extensions
 {
     public class AppSettings
     {

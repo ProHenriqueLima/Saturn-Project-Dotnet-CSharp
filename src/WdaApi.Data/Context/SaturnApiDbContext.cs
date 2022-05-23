@@ -1,6 +1,6 @@
-﻿using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
-using WdaApi.Business.Models.Audit;
+﻿using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
+using SaturnApi.Business.Models.Audit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WdaApi.Data.Context
+namespace SaturnApi.Data.Context
 {
     public class SaturnApiDbContext : IdentityDbContext<ApplicationUser>
     {

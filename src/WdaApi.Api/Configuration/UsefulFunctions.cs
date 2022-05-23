@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Configuration
+namespace SaturnApi.Api.Configuration
 {
     public static class UsefulFunctions
     {

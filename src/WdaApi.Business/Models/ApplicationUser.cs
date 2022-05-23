@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace WdaApi.Business.Models
+namespace SaturnApi.Business.Models
 {
     public class ApplicationUser : IdentityUser
     {

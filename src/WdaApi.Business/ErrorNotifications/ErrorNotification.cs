@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WdaApi.Business.ErrorNotifications
+namespace SaturnApi.Business.ErrorNotifications
 {
     public class ErrorNotification
     {

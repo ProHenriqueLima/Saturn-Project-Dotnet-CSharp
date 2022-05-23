@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using WdaApi.Api.ViewModels;
-using WdaApi.Business.Models;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Business.Models;
 using Microsoft.Extensions.Localization;
 
 
-namespace WdaApi.Api.Configuration
+namespace SaturnApi.Api.Configuration
 {
     public class AutomapperConfig : AutoMapper.Profile
     {

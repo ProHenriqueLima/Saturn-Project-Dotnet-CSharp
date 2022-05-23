@@ -1,10 +1,10 @@
-﻿using WdaApi.Business.Interfaces;
+﻿using SaturnApi.Business.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WdaApi.Business.ErrorNotifications
+namespace SaturnApi.Business.ErrorNotifications
 {
     public class ErrorNotifier : IErrorNotifier
     {

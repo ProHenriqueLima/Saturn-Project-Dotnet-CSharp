@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace WdaApi.Data
+namespace SaturnApi.Data
 {
     public static class SnakeCase
     {

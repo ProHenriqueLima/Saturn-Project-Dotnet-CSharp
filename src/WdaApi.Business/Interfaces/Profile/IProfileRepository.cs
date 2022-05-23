@@ -1,12 +1,12 @@
-﻿using WdaApi.Business.Models;
+﻿using SaturnApi.Business.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using X.PagedList;
-using WdaApi.Business.Dto;
+using SaturnApi.Business.Dto;
 
-namespace WdaApi.Business.Interfaces
+namespace SaturnApi.Business.Interfaces
 {
     public interface IProfileRepository : IRepository<ProfileUser>
     {

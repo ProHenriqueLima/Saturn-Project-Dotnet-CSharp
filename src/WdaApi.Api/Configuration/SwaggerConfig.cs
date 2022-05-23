@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Configuration
+namespace SaturnApi.Api.Configuration
 {
     public static class SwaggerConfig
     {

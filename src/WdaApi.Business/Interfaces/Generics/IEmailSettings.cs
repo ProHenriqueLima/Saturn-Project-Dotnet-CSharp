@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WdaApi.Business.Interfaces
+namespace SaturnApi.Business.Interfaces
 {
     public interface IEmailSettings
     {

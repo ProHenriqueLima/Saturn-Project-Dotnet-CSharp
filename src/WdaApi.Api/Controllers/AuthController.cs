@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using WdaApi.Api.Configuration;
-using WdaApi.Api.Extensions;
-using WdaApi.Api.Services.Profiles;
-using WdaApi.Api.ViewModels;
-using WdaApi.Api.ViewModels.UserViewModel;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
+using SaturnApi.Api.Configuration;
+using SaturnApi.Api.Extensions;
+using SaturnApi.Api.Services.Profiles;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Api.ViewModels.UserViewModel;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -22,7 +22,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Controllers
+namespace SaturnApi.Api.Controllers
 {
     [Route("{culture:culture}/api/account")]
     public class AuthController : MainController<AuthController>
@@ -238,7 +238,7 @@ namespace WdaApi.Api.Controllers
             string json = JsonConvert.SerializeObject(forgotPasswordToken);
             string forgotPasswordTokenBase64 = UsefulFunctions.Base64Encode(json);
 
-            return $"{_configuration.GetValue<string>("UrlWdaApiWeb")}/reset_password/{forgotPasswordTokenBase64}";
+            return $"{_configuration.GetValue<string>("UrlSaturnApiWeb")}/reset_password/{forgotPasswordTokenBase64}";
         }
 
         [HttpPost("ResetPassword")]
@@ -326,7 +326,7 @@ namespace WdaApi.Api.Controllers
             string json = JsonConvert.SerializeObject(confirmEmailToken);
             string confirmEmailTokenBase64 = UsefulFunctions.Base64Encode(json);
 
-            return $"{_configuration.GetValue<string>("UrlWdaApiWeb")}/confirm_email/{confirmEmailTokenBase64}";
+            return $"{_configuration.GetValue<string>("UrlSaturnApiWeb")}/confirm_email/{confirmEmailTokenBase64}";
         }
     }
 }

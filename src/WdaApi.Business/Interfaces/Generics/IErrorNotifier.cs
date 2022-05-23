@@ -1,9 +1,9 @@
-﻿using WdaApi.Business.ErrorNotifications;
+﻿using SaturnApi.Business.ErrorNotifications;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace WdaApi.Business.Interfaces
+namespace SaturnApi.Business.Interfaces
 {
     public interface IErrorNotifier
     {

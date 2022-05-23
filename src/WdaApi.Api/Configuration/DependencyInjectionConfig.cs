@@ -1,16 +1,16 @@
-﻿using WdaApi.Api.Extensions;
-using WdaApi.Api.Services;
-using WdaApi.Api.Services.Profiles;
-using WdaApi.Business.ErrorNotifications;
-using WdaApi.Business.Interfaces;
+﻿using SaturnApi.Api.Extensions;
+using SaturnApi.Api.Services;
+using SaturnApi.Api.Services.Profiles;
+using SaturnApi.Business.ErrorNotifications;
+using SaturnApi.Business.Interfaces;
 
-using WdaApi.Data.Context;
-using WdaApi.Data.Repository;
+using SaturnApi.Data.Context;
+using SaturnApi.Data.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace WdaApi.Api.Configuration
+namespace SaturnApi.Api.Configuration
 {
     public static class DependencyInjectionConfig
     {

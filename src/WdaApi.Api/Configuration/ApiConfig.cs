@@ -1,10 +1,10 @@
-﻿using WdaApi.Api.Extensions;
+﻿using SaturnApi.Api.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json.Serialization;
 
-namespace WdaApi.Api.Configuration
+namespace SaturnApi.Api.Configuration
 {
     public static class ApiConfig
     {

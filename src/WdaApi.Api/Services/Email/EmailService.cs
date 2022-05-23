@@ -1,10 +1,10 @@
 ﻿
-using WdaApi.Api.Configuration;
-using WdaApi.Api.Controllers;
-using WdaApi.Api.Extensions;
-using WdaApi.Api.ViewModels.UserViewModel;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
+using SaturnApi.Api.Configuration;
+using SaturnApi.Api.Controllers;
+using SaturnApi.Api.Extensions;
+using SaturnApi.Api.ViewModels.UserViewModel;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Services
+namespace SaturnApi.Api.Services
 {
     public class EmailService : IEmailService
     {
@@ -65,7 +65,7 @@ namespace WdaApi.Api.Services
             string json = JsonConvert.SerializeObject(confirmEmailToken);
             string confirmEmailTokenBase64 = UsefulFunctions.Base64Encode(json);
 
-            return $"{_configuration.GetValue<string>("UrlWdaApiWeb")}/confirm_email/{confirmEmailTokenBase64}";
+            return $"{_configuration.GetValue<string>("UrlSaturnApiWeb")}/confirm_email/{confirmEmailTokenBase64}";
         }
 
         public void Dispose()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace WdaApi.Business.Dto
+namespace SaturnApi.Business.Dto
 {
     public abstract class FilterGeneric
     {

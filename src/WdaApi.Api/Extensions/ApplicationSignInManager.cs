@@ -1,5 +1,5 @@
-﻿using WdaApi.Business.Models;
-using WdaApi.Data.Context;
+﻿using SaturnApi.Business.Models;
+using SaturnApi.Data.Context;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Extensions
+namespace SaturnApi.Api.Extensions
 {
     public class ApplicationSignInManager : SignInManager<ApplicationUser>
     {

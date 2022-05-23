@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WdaApi.Business.ErrorNotifications;
-using WdaApi.Business.Interfaces;
+using SaturnApi.Business.ErrorNotifications;
+using SaturnApi.Business.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Localization;
 
-namespace WdaApi.Api.Controllers
+namespace SaturnApi.Api.Controllers
 {
     [ApiController]
     public class MainController<T> : ControllerBase where T : ControllerBase

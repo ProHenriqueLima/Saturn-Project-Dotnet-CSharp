@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using WdaApi.Api.Configuration;
-using WdaApi.Api.ViewModels;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
-using WdaApi.Data.Repository;
+using SaturnApi.Api.Configuration;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Repository;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using X.PagedList;
 
-namespace WdaApi.Api.Services
+namespace SaturnApi.Api.Services
 {
     public class UserService : BaseService, IUserService
     {

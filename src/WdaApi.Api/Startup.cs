@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WdaApi.Api.Configuration;
-using WdaApi.Api.Extensions;
-using WdaApi.Business.Models;
-using WdaApi.Data.Context;
+using SaturnApi.Api.Configuration;
+using SaturnApi.Api.Extensions;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace WdaApi.Api
+namespace SaturnApi.Api
 {
     public class Startup
     {
@@ -40,9 +40,9 @@ namespace WdaApi.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<WdaApiDbContext>(options =>
+            services.AddDbContext<SaturnApiDbContext>(options =>
             {
-                options.UseMySql(Configuration.GetConnectionString("WdaApiDbContext"))
+                options.UseMySql(Configuration.GetConnectionString("SaturnApiDbContext"))
                   .EnableSensitiveDataLogging()//Para habilitar log do entity nas consultas
                   .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
             });

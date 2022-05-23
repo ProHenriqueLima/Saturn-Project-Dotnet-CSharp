@@ -1,6 +1,6 @@
-﻿using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
-using WdaApi.Data.Context;
+﻿using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WdaApi.Data.Repository
+namespace SaturnApi.Data.Repository
 {
     public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
     {

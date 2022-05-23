@@ -1,6 +1,6 @@
-﻿using WdaApi.Api.Extensions;
-using WdaApi.Business.Models;
-using WdaApi.Data.Context;
+﻿using SaturnApi.Api.Extensions;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Configuration
+namespace SaturnApi.Api.Configuration
 {
     public static class IdentityConfig
     {

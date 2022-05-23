@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-namespace WdaApi.Business.Models.Audit
+namespace SaturnApi.Business.Models.Audit
 {
     public class CustomAutoHistory : AutoHistory
     {

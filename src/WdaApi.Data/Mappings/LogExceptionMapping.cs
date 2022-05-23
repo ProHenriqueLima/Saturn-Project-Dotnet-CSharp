@@ -1,11 +1,11 @@
-﻿using WdaApi.Business.Models;
+﻿using SaturnApi.Business.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace WdaApi.Data.Mappings
+namespace SaturnApi.Data.Mappings
 {
     public class LogExceptionMapping : IEntityTypeConfiguration<LogException>
     {

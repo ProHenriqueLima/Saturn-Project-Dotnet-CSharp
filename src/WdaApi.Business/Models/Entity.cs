@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WdaApi.Business.Models
+namespace SaturnApi.Business.Models
 {
     public abstract class Entity
     {

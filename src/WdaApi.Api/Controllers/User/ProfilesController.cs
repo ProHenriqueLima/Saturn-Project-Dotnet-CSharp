@@ -1,19 +1,19 @@
 ﻿using AutoMapper;
-using WdaApi.Api.Extensions;
-using WdaApi.Api.Services.Profiles;
-using WdaApi.Api.ViewModels;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
-using WdaApi.Data.Repository;
+using SaturnApi.Api.Extensions;
+using SaturnApi.Api.Services.Profiles;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using WdaApi.Business.Dto;
+using SaturnApi.Business.Dto;
 
-namespace WdaApi.Api.Controllers.User
+namespace SaturnApi.Api.Controllers.User
 {
     [Route("{culture:culture}/api/[controller]")]
     [ApiController]

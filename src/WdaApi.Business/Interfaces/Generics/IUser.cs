@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
-namespace WdaApi.Business.Interfaces
+namespace SaturnApi.Business.Interfaces
 {
     public interface IUser
     {

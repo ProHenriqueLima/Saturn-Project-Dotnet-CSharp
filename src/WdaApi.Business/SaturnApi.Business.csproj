@@ -17,4 +17,10 @@
     <PackageReference Include="X.PagedList" Version="8.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\Validations\" />
+  </ItemGroup>
+
 </Project>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.ViewModels.UserViewModel
+namespace SaturnApi.Api.ViewModels.UserViewModel
 {
     public class UserTokenViewModel
     {

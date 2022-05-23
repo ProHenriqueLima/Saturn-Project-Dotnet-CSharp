@@ -2,13 +2,13 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using WdaApi.Business.Dto;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
-using WdaApi.Data.Context;
+using SaturnApi.Business.Dto;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Context;
 using X.PagedList;
 
-namespace WdaApi.Data.Repository
+namespace SaturnApi.Data.Repository
 {
     public class ProfileRepository : Repository<ProfileUser>, IProfileRepository
     {

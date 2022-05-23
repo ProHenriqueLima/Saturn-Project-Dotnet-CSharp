@@ -1,12 +1,12 @@
-﻿using WdaApi.Api.Controllers;
-using WdaApi.Business.Models;
+﻿using SaturnApi.Api.Controllers;
+using SaturnApi.Business.Models;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Services
+namespace SaturnApi.Api.Services
 {
     public interface IEmailService : IDisposable
     {

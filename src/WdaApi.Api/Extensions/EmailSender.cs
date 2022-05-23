@@ -1,10 +1,10 @@
-﻿using WdaApi.Business.Interfaces;
+﻿using SaturnApi.Business.Interfaces;
 using System;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Extensions
+namespace SaturnApi.Api.Extensions
 {
     public class EmailSender : IEmailSender
     {

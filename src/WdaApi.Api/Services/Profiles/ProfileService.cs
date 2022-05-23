@@ -1,17 +1,17 @@
 ﻿
 using AutoMapper;
-using WdaApi.Api.ViewModels;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
-using WdaApi.Data.Repository;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using X.PagedList;
-using WdaApi.Business.Dto;
+using SaturnApi.Business.Dto;
 
-namespace WdaApi.Api.Services.Profiles
+namespace SaturnApi.Api.Services.Profiles
 {
     public class ProfileService : BaseService, IProfileService
     {

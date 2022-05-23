@@ -1,4 +1,4 @@
-﻿using WdaApi.Business.Interfaces;
+﻿using SaturnApi.Business.Interfaces;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Extensions
+namespace SaturnApi.Api.Extensions
 {
     public class AspNetUser : IUser
     {

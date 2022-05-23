@@ -1,9 +1,9 @@
-﻿using WdaApi.Api.Configuration;
-using WdaApi.Api.Controllers;
-using WdaApi.Api.ViewModels;
-using WdaApi.Api.ViewModels.UserViewModel;
-using WdaApi.Business.Interfaces;
-using WdaApi.Business.Models;
+﻿using SaturnApi.Api.Configuration;
+using SaturnApi.Api.Controllers;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Api.ViewModels.UserViewModel;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Business.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Services
+namespace SaturnApi.Api.Services
 {
     public class UserIdentityService : BaseService, IUserIdentityService
     {

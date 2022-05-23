@@ -1,10 +1,10 @@
-﻿using WdaApi.Business.Models;
+﻿using SaturnApi.Business.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WdaApi.Business.Interfaces
+namespace SaturnApi.Business.Interfaces
 {
     public interface ILogExceptionRepository
     {

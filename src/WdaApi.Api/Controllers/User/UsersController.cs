@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using WdaApi.Api.Services;
-using WdaApi.Api.ViewModels;
-using WdaApi.Business.Interfaces;
-using WdaApi.Data.Repository;
+using SaturnApi.Api.Services;
+using SaturnApi.Api.ViewModels;
+using SaturnApi.Business.Interfaces;
+using SaturnApi.Data.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -10,7 +10,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
-namespace WdaApi.Api.Controllers
+namespace SaturnApi.Api.Controllers
 {
 
     [Route("{culture:culture}/api/[controller]")]
@@ -62,7 +62,7 @@ namespace WdaApi.Api.Controllers
         {
             if (!await _userService.CheckUserExist(id))
                 return NotFound();
-            await _userService.Update(id, _mapper.Map<WdaApi.Business.Models.User>(userVM));
+            await _userService.Update(id, _mapper.Map<SaturnApi.Business.Models.User>(userVM));
             return CustomResponse(userVM);
         }
         /// <summary>
@@ -96,13 +96,13 @@ namespace WdaApi.Api.Controllers
 
         private async Task AddUser(UserRequestVM userVM)
         {
-            var userIdentity = await _userIdentityService.Add(_mapper.Map<WdaApi.Business.Models.User>(userVM));
+            var userIdentity = await _userIdentityService.Add(_mapper.Map<SaturnApi.Business.Models.User>(userVM));
 
             try
             {               
                 if (userIdentity != null)
                 {
-                    var validUser = await _userService.Add(_mapper.Map<WdaApi.Business.Models.User>(userVM), userIdentity);
+                    var validUser = await _userService.Add(_mapper.Map<SaturnApi.Business.Models.User>(userVM), userIdentity);
                     if (validUser)
                         await _emailService.SendUserConfirmationEmail(userIdentity, _userIdentityService.GetPassword(), _localizer);
                     else

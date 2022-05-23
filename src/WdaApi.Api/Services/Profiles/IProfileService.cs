@@ -1,13 +1,13 @@
-﻿using WdaApi.Api.ViewModels;
-using WdaApi.Business.Models;
-using WdaApi.Data.Repository;
+﻿using SaturnApi.Api.ViewModels;
+using SaturnApi.Business.Models;
+using SaturnApi.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WdaApi.Business.Dto;
+using SaturnApi.Business.Dto;
 
-namespace WdaApi.Api.Services.Profiles
+namespace SaturnApi.Api.Services.Profiles
 {
     public interface IProfileService : IDisposable
     {

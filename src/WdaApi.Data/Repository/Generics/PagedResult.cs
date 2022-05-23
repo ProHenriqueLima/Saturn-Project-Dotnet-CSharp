@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WdaApi.Data.Repository
+namespace SaturnApi.Data.Repository
 {
     public class PagedResult<T> where T : class
     {
